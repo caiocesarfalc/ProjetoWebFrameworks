@@ -13,22 +13,15 @@
 		<class>br.unipe.projeto.jpa.model.ContatoModel</class>
 
 		<properties>
-			<!-- Propriedades JDBC -->
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<!-- URL DE CONEXÃO, O PADRÃO PARA MYSQL É A PORTA 3306. NESSE EXEMPLO A PORTA FOI CONFIGURADA EM LOCAL DIFERENTE -->
-			 <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/unipewf" /> 
-			<!--<property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.163.128/pos" />-->
-
-			<property name="javax.persistence.jdbc.user" value="root" />
-			<property name="javax.persistence.jdbc.password" value="" />
-
 			<!-- Configurações específicas do Hibernate -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
-			
-			<!-- Propriedades create, create-drop, validate   Muito cuidado com essas definições -->
-			<property name="hibernate.hbm2ddl.auto" value="update" />
-			<property name="hibernate.show_sql" value="true" />
-			<property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost/unipewf?useTimezone=true&amp;serverTimezone=UTC" />
+            <property name="hibernate.connection.driver" value="com.mysql.jdbc.Driver" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
 	</persistence-unit>
 </persistence>
