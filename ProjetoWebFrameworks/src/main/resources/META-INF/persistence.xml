@@ -11,6 +11,7 @@
 
 		<!-- Aqui são listadas todas as entidades -->
 		<class>br.unipe.projeto.jpa.model.ContatoModel</class>
+		<class>br.unipe.projeto.jpa.model.UsuarioModel</class>
 
 		<properties>
 			<!-- Configurações específicas do Hibernate -->

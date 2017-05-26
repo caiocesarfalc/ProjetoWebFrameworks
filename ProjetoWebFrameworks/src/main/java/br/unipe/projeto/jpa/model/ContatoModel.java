@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -24,6 +25,16 @@ public class ContatoModel implements Serializable{
 	@Column(name="email")
 	private String email;
 	
+	
+	@ManyToOne
+	private UsuarioModel usuario;
+	
+	public UsuarioModel getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(UsuarioModel usuario) {
+		this.usuario = usuario;
+	}
 	public int getId() {
 		return id;
 	}
